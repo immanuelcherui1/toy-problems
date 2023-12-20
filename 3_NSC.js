@@ -7,6 +7,7 @@ prompt.get(['basicSalary'], function (err, salo)
 //returns value entered via command line
  {
 
+
 const payee =()=>{
     // calculate nssf
     const nssfMin = 0.06;
@@ -21,6 +22,7 @@ const payee =()=>{
     else{
         nssf2 += 1080;
     }
+
 
     let salary = salo.basicSalary - nssf2;
     let personalRelief = 2400;
@@ -48,6 +50,8 @@ const payee =()=>{
         //if so, takes salary less 32333 multiply by 0.3
         //the add 2083.33 and 2400 to the value obtained
     }
+
+
 
     //it implements if-else statement to determine the nhif to be deducted
     if (salo.basicSalary >= 1000) {
@@ -90,6 +94,12 @@ const payee =()=>{
         nhif += 0;
     }
 
+
+
+
+
+
+
     //to get paye you less personal relief
     //for net monthly salary you take basic salary less nhif, nssf and paye 
     let pay = paye-personalRelief;
@@ -102,8 +112,11 @@ const payee =()=>{
     console.log('  Net Monthly Salary: ' + pow);
 }
 
+
 payee();
 });
+
+
 
 function onErr(err) {
     console.log(err);
