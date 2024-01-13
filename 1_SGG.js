@@ -1,3 +1,4 @@
+// Comments are on the README.md file
 const ps= require('prompt-sync');
 const prompt=ps();
 
@@ -18,7 +19,7 @@ let marks= prompt('Enter Student\'s marks: ')
     else if (marks<49 && marks >=40){
         console.log('  Grade: ' + 'D');
     }
-    else if (marks<40 && marks >=59){
+    else if (marks<40 && marks >=0){
         console.log('  Grade: ' + 'E');
     }
 }

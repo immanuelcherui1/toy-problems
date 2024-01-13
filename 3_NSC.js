@@ -1,12 +1,16 @@
-
 const prompt = require('prompt');
 //calls prompt module
 prompt.start();
 
-prompt.get(['basicSalary'], function (err, salo)
+prompt.get(['basicSalary'],  function (err, salo)
 //returns value entered via command line
  {
+    const basicSalary = parseFloat(salo.basicSalary);
 
+    if (isNaN(basicSalary) || basicSalary < 0) {
+      console.log('Invalid input for basic salary');
+      return;
+    }
 
 const payee =()=>{
     // calculate nssf
